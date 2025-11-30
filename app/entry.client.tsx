@@ -6,7 +6,7 @@
 
 import { RemixBrowser } from "@remix-run/react";
 import i18next, { use } from "i18next";
-import I18NexFsBackend from "i18next-fs-backend";
+import HttpBackend from "i18next-http-backend";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { I18nextProvider, initReactI18next } from "react-i18next";
@@ -17,7 +17,7 @@ import i18n from "./i18n";
 async function hydrate() {
   await use(initReactI18next)
     .use(LanguageDetector)
-    .use(I18NexFsBackend)
+    .use(HttpBackend)
     .init({
       ...i18n,
       ns: getInitialNamespaces(),

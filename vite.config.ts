@@ -9,6 +9,14 @@ installGlobals();
 const mode = process.env.NODE_ENV;
 
 export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+    port: 5000,
+    hmr: {
+      clientPort: 443,
+      protocol: "wss",
+    },
+  },
   build: {
     cssMinify: mode === "production",
     sourcemap: true,
