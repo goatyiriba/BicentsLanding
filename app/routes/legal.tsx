@@ -4,8 +4,8 @@ import LegalSection from "~/components/legal/legal-section";
 function LegalPage() {
   return (
     <PageLayout>
-      <article className="space-y-8 pb-10">
-        <h1>Legal</h1>
+      <article className="space-y-6 sm:space-y-8 pb-6 sm:pb-10 max-w-3xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Legal</h1>
 
         <div className="space-y-6">
           <p className="text-balance">

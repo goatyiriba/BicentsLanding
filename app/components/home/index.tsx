@@ -71,18 +71,18 @@ function Home() {
   };
 
   return (
-    <div className="min-h-dvh bg-background flex flex-col">
+    <div className="min-h-dvh bg-background flex flex-col overflow-x-hidden">
       <HomeHeader />
-      <div className="container grow flex w-full pt-8">
-        <div className="flex w-full">
-          <section className="lg:w-3/5 flex items-center">
+      <div className="grow flex w-full pt-4 sm:pt-6 lg:pt-8 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 lg:max-w-7xl lg:mx-auto">
+          <section className="w-full lg:w-3/5 flex items-center justify-center lg:justify-start">
             <HeroText />
           </section>
-          <section className="lg:w-full lg:max-w-[400px] font-sans text-lg flex items-start pt-14 justify-end md:ml-auto">
+          <section className="w-full lg:w-full lg:max-w-[400px] font-sans text-base lg:text-lg flex items-start pt-0 lg:pt-14 justify-center lg:justify-end lg:ml-auto">
             <Accordion
               type="single"
               collapsible
-              className="w-full bg-[#1A1A1A]"
+              className="w-full max-w-[400px] bg-[#1A1A1A]"
             >
               {ACCORDION_ITEMS.map((item, idx) => (
                 <AccordionItem
@@ -90,13 +90,13 @@ function Home() {
                   key={item.label}
                   onClick={() => handleAccordionItemClick(item.label)}
                   className={cn(
-                    "px-6 data-[state=open]:bg-[#BBC3C3] transition-[background-color] duration-200 data-[state=open]:text-[#1A1A1A] py-3 border-none relative after:absolute after:content-['\0a0'] after:inline-block after:h-[1px] after:bottom-0 after:w-[88%] after:mx-auto after:bg-[#BBC3C31A]/10 after:-translate-x-1/2 after:left-1/2",
+                    "px-4 sm:px-6 data-[state=open]:bg-[#BBC3C3] transition-[background-color] duration-200 data-[state=open]:text-[#1A1A1A] py-3 border-none relative after:absolute after:content-['\0a0'] after:inline-block after:h-[1px] after:bottom-0 after:w-[88%] after:mx-auto after:bg-[#BBC3C31A]/10 after:-translate-x-1/2 after:left-1/2",
                     {
                       "after:h-0": idx === ACCORDION_ITEMS.length - 1,
                     }
                   )}
                 >
-                  <AccordionTrigger className="!no-underline">
+                  <AccordionTrigger className="!no-underline text-sm sm:text-base">
                     {item.label}
                   </AccordionTrigger>
                   <AccordionContent>{item.content}</AccordionContent>
@@ -106,7 +106,7 @@ function Home() {
           </section>
         </div>
       </div>
-      <div className="mt-auto">
+      <div className="mt-auto px-4 sm:px-6 lg:px-8">
         <Footer />
       </div>
     </div>

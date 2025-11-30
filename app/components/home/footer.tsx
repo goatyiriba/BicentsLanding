@@ -29,10 +29,10 @@ const MenuItems: MenuItem[] = [
 function Footer() {
   return (
     <footer className="">
-      <ul className="flex justify-center flex-wrap md:flex-nowrap items-center gap-5 py-4 md:gap-20 text-sm">
+      <ul className="flex justify-center flex-wrap items-center gap-x-4 gap-y-2 sm:gap-x-8 md:gap-x-12 lg:gap-x-20 py-4 text-xs sm:text-sm">
         {MenuItems.map((item) => (
           <li key={item.label} className="text-[#BBC3C3]">
-            <Link to={item.href} className="flex items-center gap-1">
+            <Link to={item.href} className="flex items-center gap-1 hover:text-white transition-colors">
               {item.label}
               <span>{item?.icon && item.icon}</span>
             </Link>

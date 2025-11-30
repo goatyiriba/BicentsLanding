@@ -4,10 +4,10 @@ import PageLayout from "~/components/layout/page-layout";
 function JoinUsPage() {
   return (
     <PageLayout>
-      <div className="flex flex-col gap-10 md:flex-row">
-        <section className="md:w-1/2">
-          <h1>Join Us</h1>
-          <div className="space-y-4">
+      <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 lg:flex-row">
+        <section className="w-full lg:w-1/2">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">Join Us</h1>
+          <div className="space-y-3 sm:space-y-4 text-sm sm:text-base">
             <p className="text-balance">
               When you join Bicents, you become part of an unparalleled
               adventure of daily transformation.
@@ -24,7 +24,7 @@ function JoinUsPage() {
             </p>
           </div>
         </section>
-        <section className="md:w-1/2 flex justify-end">
+        <section className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           <JoinUsForm />
         </section>
       </div>

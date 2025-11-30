@@ -15,8 +15,8 @@ const validator = withZod(
 
 function JoinUsForm() {
   return (
-    <div className="w-full max-w-[500px]">
-      <ValidatedForm validator={validator} method="post" className="grid gap-8">
+    <div className="w-full max-w-[500px] mx-auto sm:mx-0">
+      <ValidatedForm validator={validator} method="post" className="grid gap-4 sm:gap-6 lg:gap-8">
         <InputField label="Your fullname" name="fullname" placeholder="Email" />
         <InputField
           label="Your email address"
@@ -28,9 +28,10 @@ function JoinUsForm() {
           label="What's your expertise ?"
           name="expertise"
           placeholder="What's your expertise ?"
-          rows={10}
+          rows={6}
+          className="sm:rows-8 lg:rows-10"
         />
-        <SubmitButton className="bg-[#4F30E5]">Send</SubmitButton>
+        <SubmitButton className="bg-[#4F30E5] w-full sm:w-auto">Send</SubmitButton>
       </ValidatedForm>
     </div>
   );
