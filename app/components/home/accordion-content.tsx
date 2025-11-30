@@ -1,4 +1,3 @@
-import { Link } from "@remix-run/react";
 import { Button } from "../ui/button";
 
 type HomeAccordionContentProps = {
@@ -14,11 +13,12 @@ function HomeAccordionContent({
     <section className="space-y-4 sm:space-y-5">
       <p className="text-[#1A1A1A] text-balance text-sm sm:text-base">{content}</p>
       <div className="text-center sm:text-end">
-        <Link to={exploreHref} prefetch="viewport">
-          <Button className="bg-purple hover:bg-purple/80 transition-colors duration-200 w-full sm:w-auto text-sm sm:text-base">
-            Start exploration
-          </Button>
-        </Link>
+        <Button 
+          className="bg-gray-500 cursor-not-allowed opacity-70 w-full sm:w-auto text-sm sm:text-base"
+          disabled
+        >
+          Start exploration
+        </Button>
       </div>
     </section>
   );
