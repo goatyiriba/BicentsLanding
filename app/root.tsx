@@ -1,4 +1,4 @@
-import { json, LinksFunction, LoaderFunctionArgs } from "@remix-run/node";
+import { json, LinksFunction, LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import {
   Links,
   Meta,
@@ -7,10 +7,18 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from "@remix-run/react";
+
 import globalStyles from "~/styles/globals.css?url";
 import i18next from "./lib/i18next.server";
 import { useTranslation } from "react-i18next";
 import { useChangeLanguage } from "remix-i18next/react";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Bicents" },
+    { name: "description", content: "We are building software to improve billions people lives." },
+  ];
+};
 
 export const links: LinksFunction = () => [
   {
