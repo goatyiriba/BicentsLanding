@@ -14,6 +14,11 @@ import { useChangeLanguage } from "remix-i18next/react";
 
 export const links: LinksFunction = () => [
   {
+    rel: "icon",
+    type: "image/png",
+    href: "/favicon.png",
+  },
+  {
     rel: "stylesheet",
     href: globalStyles,
   },
