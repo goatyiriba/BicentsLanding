@@ -17,6 +17,14 @@ export const meta: MetaFunction = () => {
   return [
     { title: "Bicents" },
     { name: "description", content: "We are building software to improve billions people lives." },
+    { property: "og:title", content: "Bicents" },
+    { property: "og:description", content: "We are building software to improve billions people lives." },
+    { property: "og:image", content: "/imgs/logo.png" },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Bicents" },
+    { name: "twitter:description", content: "We are building software to improve billions people lives." },
+    { name: "twitter:image", content: "/imgs/logo.png" },
   ];
 };
 
